@@ -40,7 +40,7 @@ filebeat.inputs:
   fields_under_root: true
 
 output.kafka:
-  hosts: ["192.168.33.1:9092"] # Remplacez par l'adresse IP de votre hôte
+  hosts: ["<Host's IP>:9092"] # Replace by your own Host's IP ; you must choose the one to whom you can make requests from the VM
   topic: '%{[log_topic]}'
   codec.json:
     pretty: false
@@ -69,12 +69,22 @@ sudo filebeat modules enable kafka
 
 Then, run a nginx image with docker :
 ```bash
-docker run -d --name nginx-container nginx:latest -p 8080:80
+docker run -d --name nginx-container -p 8080:80 nginx:latest 
 ```
 
-Then restart filebeat :
+Then verify if your filebeat is running :
+```bash
+sudo service filebeat status
+```
+
+if yes restart filebeat :
 ```bash
 sudo service filebeat restart
+```
+
+else start filebeat :
+```bash
+sudo service filebeat start
 ```
 
 You can check if filebeat is working well with this command :
@@ -85,7 +95,7 @@ sudo tail -f /var/log/filebeat/filebeat
 ### Spark script
 Finaly, execute the spark script :
 ```bash
-screen -dmS spark /vagrant_data/script_spark.sh
+screen -dmS spark /vagrant_data/start_spark.sh
 ```
 
 And if you do :

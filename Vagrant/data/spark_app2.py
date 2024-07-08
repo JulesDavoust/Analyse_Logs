@@ -36,7 +36,7 @@ spark = (SparkSession.builder
 df = (spark
     .readStream
     .format("kafka")
-    .option("kafka.bootstrap.servers", "192.168.33.1:9092")  # Remplacez par l'adresse IP de votre hôte
+    .option("kafka.bootstrap.servers", "<Host's IP>:9092")  # Remplacez par l'adresse IP de votre hôte
     .option("subscribe", "logs")
     .load())
 

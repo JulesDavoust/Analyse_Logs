@@ -23468,3 +23468,1878 @@ Batch: 1
 24/06/26 15:44:43 INFO ShutdownHookManager: Deleting directory /tmp/temporary-98ff227a-38f2-4b61-b630-ccfc3e0e8067
 24/06/26 15:44:43 INFO ShutdownHookManager: Deleting directory /tmp/spark-02992243-1be2-4e9c-b5db-1f8630a4cb9b
 24/06/26 15:44:43 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+Starting Spark at Mon Jul  8 12:20:05 PM UTC 2024
+24/07/08 12:20:10 WARN Utils: Your hostname, vgr-spark-base64 resolves to a loopback address: 127.0.2.1; using 10.0.2.15 instead (on interface eth0)
+24/07/08 12:20:10 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+:: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-3cb65297-2d27-43df-8119-9054346382e0;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 692ms :: artifacts dl 30ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-3cb65297-2d27-43df-8119-9054346382e0
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/12ms)
+24/07/08 12:20:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/07/08 12:20:14 INFO SparkContext: Running Spark version 3.5.1
+24/07/08 12:20:14 INFO SparkContext: OS info Linux, 5.15.0-56-generic, amd64
+24/07/08 12:20:14 INFO SparkContext: Java version 11.0.20.1
+24/07/08 12:20:14 INFO ResourceUtils: ==============================================================
+24/07/08 12:20:14 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/07/08 12:20:14 INFO ResourceUtils: ==============================================================
+24/07/08 12:20:14 INFO SparkContext: Submitted application: KafkaConnectivityTest
+24/07/08 12:20:14 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/07/08 12:20:14 INFO ResourceProfile: Limiting resource is cpu
+24/07/08 12:20:14 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/07/08 12:20:15 INFO SecurityManager: Changing view acls to: root
+24/07/08 12:20:15 INFO SecurityManager: Changing modify acls to: root
+24/07/08 12:20:15 INFO SecurityManager: Changing view acls groups to: 
+24/07/08 12:20:15 INFO SecurityManager: Changing modify acls groups to: 
+24/07/08 12:20:15 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+24/07/08 12:20:15 INFO Utils: Successfully started service 'sparkDriver' on port 37009.
+24/07/08 12:20:15 INFO SparkEnv: Registering MapOutputTracker
+24/07/08 12:20:15 INFO SparkEnv: Registering BlockManagerMaster
+24/07/08 12:20:15 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/07/08 12:20:15 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/07/08 12:20:15 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/07/08 12:20:15 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-6d20c0de-7ad3-42a9-9d88-abd7e13c9929
+24/07/08 12:20:16 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/07/08 12:20:16 INFO SparkEnv: Registering OutputCommitCoordinator
+24/07/08 12:20:16 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/07/08 12:20:16 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/07/08 12:20:16 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar at spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar at spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar at spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO SparkContext: Added JAR file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar at file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:20:16 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar at file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:20:16 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO Utils: Copying /root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.kafka_kafka-clients-3.4.1.jar
+24/07/08 12:20:16 INFO SparkContext: Added file file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO Utils: Copying /root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/com.google.code.findbugs_jsr305-3.0.0.jar
+24/07/08 12:20:16 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO Utils: Copying /root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.commons_commons-pool2-2.11.1.jar
+24/07/08 12:20:16 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1720441214712
+24/07/08 12:20:16 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+24/07/08 12:20:17 INFO SparkContext: Added file file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: Copying /root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.lz4_lz4-java-1.8.0.jar
+24/07/08 12:20:17 INFO SparkContext: Added file file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar at file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: Copying /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.xerial.snappy_snappy-java-1.1.10.3.jar
+24/07/08 12:20:17 INFO SparkContext: Added file file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: Copying /root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.slf4j_slf4j-api-2.0.7.jar
+24/07/08 12:20:17 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+24/07/08 12:20:17 INFO SparkContext: Added file file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: Copying /root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/commons-logging_commons-logging-1.1.3.jar
+24/07/08 12:20:17 INFO Executor: Starting executor ID driver on host efrei-xmg4agau1.etudiants.campus.villejuif
+24/07/08 12:20:17 INFO Executor: OS info Linux, 5.15.0-56-generic, amd64
+24/07/08 12:20:17 INFO Executor: Java version 11.0.20.1
+24/07/08 12:20:17 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/07/08 12:20:17 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@4254a87e for default.
+24/07/08 12:20:17 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: /root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+24/07/08 12:20:17 INFO Executor: Fetching file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: /root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/com.google.code.findbugs_jsr305-3.0.0.jar
+24/07/08 12:20:17 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: /root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+24/07/08 12:20:17 INFO Executor: Fetching file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.xerial.snappy_snappy-java-1.1.10.3.jar
+24/07/08 12:20:17 INFO Executor: Fetching file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: /root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.slf4j_slf4j-api-2.0.7.jar
+24/07/08 12:20:17 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: /root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.commons_commons-pool2-2.11.1.jar
+24/07/08 12:20:17 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:20:17 INFO Executor: Fetching file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: /root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/commons-logging_commons-logging-1.1.3.jar
+24/07/08 12:20:17 INFO Executor: Fetching file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: /root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.lz4_lz4-java-1.8.0.jar
+24/07/08 12:20:17 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: /root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.kafka_kafka-clients-3.4.1.jar
+24/07/08 12:20:17 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO Utils: /root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:20:17 INFO Executor: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1720441214712
+24/07/08 12:20:17 INFO TransportClientFactory: Successfully created connection to efrei-xmg4agau1.etudiants.campus.villejuif/10.0.2.15:37009 after 37 ms (0 ms spent in bootstraps)
+24/07/08 12:20:18 INFO Utils: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp3252759033444084007.tmp
+24/07/08 12:20:18 INFO Utils: /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp3252759033444084007.tmp has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.kafka_kafka-clients-3.4.1.jar
+24/07/08 12:20:18 INFO Executor: Adding file:/tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.kafka_kafka-clients-3.4.1.jar to class loader default
+24/07/08 12:20:18 INFO Executor: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1720441214712
+24/07/08 12:20:18 INFO Utils: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp12048362920576645554.tmp
+24/07/08 12:20:18 INFO Utils: /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp12048362920576645554.tmp has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/com.google.code.findbugs_jsr305-3.0.0.jar
+24/07/08 12:20:18 INFO Executor: Adding file:/tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/com.google.code.findbugs_jsr305-3.0.0.jar to class loader default
+24/07/08 12:20:18 INFO Executor: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar with timestamp 1720441214712
+24/07/08 12:20:18 INFO Utils: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp9085004913521588425.tmp
+24/07/08 12:20:18 INFO Utils: /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp9085004913521588425.tmp has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:20:18 INFO Executor: Adding file:/tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar to class loader default
+24/07/08 12:20:18 INFO Executor: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1720441214712
+24/07/08 12:20:18 INFO Utils: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp7936654651528745473.tmp
+24/07/08 12:20:18 INFO Utils: /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp7936654651528745473.tmp has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.xerial.snappy_snappy-java-1.1.10.3.jar
+24/07/08 12:20:18 INFO Executor: Adding file:/tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.xerial.snappy_snappy-java-1.1.10.3.jar to class loader default
+24/07/08 12:20:18 INFO Executor: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar with timestamp 1720441214712
+24/07/08 12:20:18 INFO Utils: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp17091265161573405870.tmp
+24/07/08 12:20:18 INFO Utils: /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp17091265161573405870.tmp has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:20:18 INFO Executor: Adding file:/tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar to class loader default
+24/07/08 12:20:18 INFO Executor: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1720441214712
+24/07/08 12:20:18 INFO Utils: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp643927142375555465.tmp
+24/07/08 12:20:18 INFO Utils: /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp643927142375555465.tmp has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.commons_commons-pool2-2.11.1.jar
+24/07/08 12:20:18 INFO Executor: Adding file:/tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.commons_commons-pool2-2.11.1.jar to class loader default
+24/07/08 12:20:18 INFO Executor: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1720441214712
+24/07/08 12:20:18 INFO Utils: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp16143555438128320072.tmp
+24/07/08 12:20:19 INFO Utils: /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp16143555438128320072.tmp has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+24/07/08 12:20:19 INFO Executor: Adding file:/tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.hadoop_hadoop-client-api-3.3.4.jar to class loader default
+24/07/08 12:20:19 INFO Executor: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1720441214712
+24/07/08 12:20:19 INFO Utils: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp2077103211737458489.tmp
+24/07/08 12:20:19 INFO Utils: /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp2077103211737458489.tmp has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.lz4_lz4-java-1.8.0.jar
+24/07/08 12:20:19 INFO Executor: Adding file:/tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.lz4_lz4-java-1.8.0.jar to class loader default
+24/07/08 12:20:19 INFO Executor: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1720441214712
+24/07/08 12:20:19 INFO Utils: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp3508803331166840253.tmp
+24/07/08 12:20:19 INFO Utils: /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp3508803331166840253.tmp has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/commons-logging_commons-logging-1.1.3.jar
+24/07/08 12:20:19 INFO Executor: Adding file:/tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/commons-logging_commons-logging-1.1.3.jar to class loader default
+24/07/08 12:20:19 INFO Executor: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1720441214712
+24/07/08 12:20:19 INFO Utils: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp884748585301240882.tmp
+24/07/08 12:20:20 INFO Utils: /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp884748585301240882.tmp has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+24/07/08 12:20:20 INFO Executor: Adding file:/tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to class loader default
+24/07/08 12:20:20 INFO Executor: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1720441214712
+24/07/08 12:20:20 INFO Utils: Fetching spark://efrei-xmg4agau1.etudiants.campus.villejuif:37009/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp2560032761551528759.tmp
+24/07/08 12:20:20 INFO Utils: /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/fetchFileTemp2560032761551528759.tmp has been previously copied to /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.slf4j_slf4j-api-2.0.7.jar
+24/07/08 12:20:20 INFO Executor: Adding file:/tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/userFiles-b787969d-075d-4988-af97-9056f903c368/org.slf4j_slf4j-api-2.0.7.jar to class loader default
+24/07/08 12:20:20 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37097.
+24/07/08 12:20:20 INFO NettyBlockTransferService: Server created on efrei-xmg4agau1.etudiants.campus.villejuif:37097
+24/07/08 12:20:20 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/07/08 12:20:20 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, efrei-xmg4agau1.etudiants.campus.villejuif, 37097, None)
+24/07/08 12:20:20 INFO BlockManagerMasterEndpoint: Registering block manager efrei-xmg4agau1.etudiants.campus.villejuif:37097 with 434.4 MiB RAM, BlockManagerId(driver, efrei-xmg4agau1.etudiants.campus.villejuif, 37097, None)
+24/07/08 12:20:20 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, efrei-xmg4agau1.etudiants.campus.villejuif, 37097, None)
+24/07/08 12:20:20 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, efrei-xmg4agau1.etudiants.campus.villejuif, 37097, None)
+24/07/08 12:20:21 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/07/08 12:20:21 INFO SharedState: Warehouse path is 'file:/vagrant_data/spark-warehouse'.
+24/07/08 12:20:25 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+24/07/08 12:20:25 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+24/07/08 12:20:25 INFO ResolveWriteToStream: Checkpoint root file:///tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd resolved to file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd.
+24/07/08 12:20:25 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+24/07/08 12:20:25 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/metadata using temp file file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/.metadata.7f6c5536-0a49-4288-8f5a-1e59fd462b10.tmp
+24/07/08 12:20:26 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/.metadata.7f6c5536-0a49-4288-8f5a-1e59fd462b10.tmp to file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/metadata
+24/07/08 12:20:26 INFO MicroBatchExecution: Starting logs_table [id = c4a78c9f-1d30-4178-b7bb-99f2484ec961, runId = 61d90614-b10e-4443-bf5f-3e2761655aae]. Use file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd to store the query checkpoint.
+24/07/08 12:20:26 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@67630322] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@843863]
+24/07/08 12:20:26 INFO OffsetSeqLog: BatchIds found from listing: 
+24/07/08 12:20:26 INFO OffsetSeqLog: BatchIds found from listing: 
+24/07/08 12:20:26 INFO MicroBatchExecution: Starting new streaming query.
+24/07/08 12:20:26 INFO MicroBatchExecution: Stream started from {}
+24/07/08 12:20:26 INFO AdminClientConfig: AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [192.168.33.1:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+24/07/08 12:20:27 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+24/07/08 12:20:27 INFO ResolveWriteToStream: Checkpoint root file:///tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea resolved to file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea.
+24/07/08 12:20:27 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+24/07/08 12:20:27 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/metadata using temp file file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/.metadata.37c87b0f-d603-4719-9a0d-340c60d317f2.tmp
+24/07/08 12:20:27 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+24/07/08 12:20:27 INFO AppInfoParser: Kafka version: 3.4.1
+24/07/08 12:20:27 INFO AppInfoParser: Kafka commitId: 8a516edc2755df89
+24/07/08 12:20:27 INFO AppInfoParser: Kafka startTimeMs: 1720441227126
+24/07/08 12:20:27 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/.metadata.37c87b0f-d603-4719-9a0d-340c60d317f2.tmp to file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/metadata
+24/07/08 12:20:27 INFO MicroBatchExecution: Starting [id = 0b4e3d3d-86e1-4753-b183-322293cb1d72, runId = 09358a5e-4216-4fec-92fd-6ce6e95c1ac0]. Use file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea to store the query checkpoint.
+24/07/08 12:20:27 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@67630322] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@843863]
+24/07/08 12:20:27 INFO OffsetSeqLog: BatchIds found from listing: 
+24/07/08 12:20:27 INFO OffsetSeqLog: BatchIds found from listing: 
+24/07/08 12:20:27 INFO MicroBatchExecution: Starting new streaming query.
+24/07/08 12:20:27 INFO MicroBatchExecution: Stream started from {}
+24/07/08 12:20:27 INFO AdminClientConfig: AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [192.168.33.1:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+24/07/08 12:20:27 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+24/07/08 12:20:27 INFO AppInfoParser: Kafka version: 3.4.1
+24/07/08 12:20:27 INFO AppInfoParser: Kafka commitId: 8a516edc2755df89
+24/07/08 12:20:27 INFO AppInfoParser: Kafka startTimeMs: 1720441227333
+ * Serving Flask app 'spark_app2'
+ * Debug mode: off
+24/07/08 12:20:27 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/sources/0/0 using temp file file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/sources/0/.0.9fdb2134-1186-4921-8d19-cab7d7fff474.tmp
+24/07/08 12:20:27 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/sources/0/0 using temp file file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/sources/0/.0.d82b9a7f-523f-4b3e-aa8b-862a100a4a73.tmp
+24/07/08 12:20:28 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/sources/0/.0.9fdb2134-1186-4921-8d19-cab7d7fff474.tmp to file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/sources/0/0
+24/07/08 12:20:28 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/sources/0/.0.d82b9a7f-523f-4b3e-aa8b-862a100a4a73.tmp to file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/sources/0/0
+24/07/08 12:20:28 INFO KafkaMicroBatchStream: Initial offsets: {"logs":{"0":0}}
+24/07/08 12:20:28 INFO KafkaMicroBatchStream: Initial offsets: {"logs":{"0":0}}
+24/07/08 12:20:28 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/offsets/0 using temp file file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/offsets/.0.a82e8e15-557b-4ec6-a469-1858766f2e0a.tmp
+24/07/08 12:20:28 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/offsets/0 using temp file file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/offsets/.0.a85c5e16-b4fd-4fb8-b2b5-fcb70be66c62.tmp
+24/07/08 12:20:28 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/offsets/.0.a82e8e15-557b-4ec6-a469-1858766f2e0a.tmp to file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/offsets/0
+24/07/08 12:20:28 INFO MicroBatchExecution: Committed offsets for batch 0. Metadata OffsetSeqMetadata(0,1720441228031,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+24/07/08 12:20:28 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/offsets/.0.a85c5e16-b4fd-4fb8-b2b5-fcb70be66c62.tmp to file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/offsets/0
+24/07/08 12:20:28 INFO MicroBatchExecution: Committed offsets for batch 0. Metadata OffsetSeqMetadata(0,1720441228036,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:28 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:20:29 INFO CodeGenerator: Code generated in 443.171869 ms
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.15:5000
+Press CTRL+C to quit
+24/07/08 12:20:29 INFO WriteToDataSourceV2Exec: Start processing data source write support: MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]]. The input RDD has 1 partitions.
+24/07/08 12:20:29 INFO WriteToDataSourceV2Exec: Start processing data source write support: MicroBatchWrite[epoch: 0, writer: org.apache.spark.sql.execution.streaming.sources.MemoryStreamingWrite@470e5031]. The input RDD has 1 partitions.
+24/07/08 12:20:29 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+24/07/08 12:20:29 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+24/07/08 12:20:29 INFO DAGScheduler: Got job 0 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/07/08 12:20:29 INFO DAGScheduler: Final stage: ResultStage 0 (start at NativeMethodAccessorImpl.java:0)
+24/07/08 12:20:29 INFO DAGScheduler: Parents of final stage: List()
+24/07/08 12:20:29 INFO DAGScheduler: Missing parents: List()
+24/07/08 12:20:29 INFO DAGScheduler: Submitting ResultStage 0 (ParallelCollectionRDD[9] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/07/08 12:20:29 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 3.4 KiB, free 434.4 MiB)
+24/07/08 12:20:29 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 2035.0 B, free 434.4 MiB)
+24/07/08 12:20:29 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on efrei-xmg4agau1.etudiants.campus.villejuif:37097 (size: 2035.0 B, free: 434.4 MiB)
+24/07/08 12:20:29 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1585
+24/07/08 12:20:29 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (ParallelCollectionRDD[9] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/07/08 12:20:29 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+24/07/08 12:20:29 INFO DAGScheduler: Got job 1 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/07/08 12:20:29 INFO DAGScheduler: Final stage: ResultStage 1 (start at NativeMethodAccessorImpl.java:0)
+24/07/08 12:20:29 INFO DAGScheduler: Parents of final stage: List()
+24/07/08 12:20:29 INFO DAGScheduler: Missing parents: List()
+24/07/08 12:20:29 INFO DAGScheduler: Submitting ResultStage 1 (ParallelCollectionRDD[8] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/07/08 12:20:29 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.5 KiB, free 434.4 MiB)
+24/07/08 12:20:29 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.5 KiB, free 434.4 MiB)
+24/07/08 12:20:29 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on efrei-xmg4agau1.etudiants.campus.villejuif:37097 (size: 2.5 KiB, free: 434.4 MiB)
+24/07/08 12:20:29 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+24/07/08 12:20:29 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (ParallelCollectionRDD[8] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/07/08 12:20:29 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+24/07/08 12:20:29 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (efrei-xmg4agau1.etudiants.campus.villejuif, executor driver, partition 0, PROCESS_LOCAL, 10015 bytes) 
+24/07/08 12:20:29 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (efrei-xmg4agau1.etudiants.campus.villejuif, executor driver, partition 0, PROCESS_LOCAL, 10015 bytes) 
+24/07/08 12:20:29 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+24/07/08 12:20:29 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+24/07/08 12:20:30 INFO DataWritingSparkTask: Writer for partition 0 is committing.
+24/07/08 12:20:30 INFO DataWritingSparkTask: Committed partition 0 (task 0, attempt 0, stage 0.0)
+24/07/08 12:20:30 INFO DataWritingSparkTask: Writer for partition 0 is committing.
+24/07/08 12:20:30 INFO DataWritingSparkTask: Committed partition 0 (task 1, attempt 0, stage 1.0)
+24/07/08 12:20:30 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1396 bytes result sent to driver
+24/07/08 12:20:30 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1295 bytes result sent to driver
+24/07/08 12:20:30 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 268 ms on efrei-xmg4agau1.etudiants.campus.villejuif (executor driver) (1/1)
+24/07/08 12:20:30 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+24/07/08 12:20:30 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 336 ms on efrei-xmg4agau1.etudiants.campus.villejuif (executor driver) (1/1)
+24/07/08 12:20:30 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/07/08 12:20:30 INFO DAGScheduler: ResultStage 1 (start at NativeMethodAccessorImpl.java:0) finished in 0.434 s
+24/07/08 12:20:30 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+24/07/08 12:20:30 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+24/07/08 12:20:30 INFO DAGScheduler: Job 1 finished: start at NativeMethodAccessorImpl.java:0, took 0.803157 s
+24/07/08 12:20:30 INFO DAGScheduler: ResultStage 0 (start at NativeMethodAccessorImpl.java:0) finished in 0.765 s
+24/07/08 12:20:30 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/07/08 12:20:30 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+24/07/08 12:20:30 INFO DAGScheduler: Job 0 finished: start at NativeMethodAccessorImpl.java:0, took 0.820080 s
+24/07/08 12:20:30 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: org.apache.spark.sql.execution.streaming.sources.MemoryStreamingWrite@470e5031] is committing.
+24/07/08 12:20:30 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]] is committing.
+24/07/08 12:20:30 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: org.apache.spark.sql.execution.streaming.sources.MemoryStreamingWrite@470e5031] committed.
+-------------------------------------------
+Batch: 0
+-------------------------------------------
+24/07/08 12:20:30 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/commits/0 using temp file file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/commits/.0.45f36058-2d67-4ce6-b771-c04eb7457141.tmp
++----------+---------+-------+---------+----+------+
+|@timestamp|log_level|message|container|host|stream|
++----------+---------+-------+---------+----+------+
++----------+---------+-------+---------+----+------+
+
+24/07/08 12:20:30 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]] committed.
+24/07/08 12:20:30 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/commits/0 using temp file file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/commits/.0.4389565d-5eb7-43cf-afd0-131572723988.tmp
+24/07/08 12:20:30 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/commits/.0.45f36058-2d67-4ce6-b771-c04eb7457141.tmp to file:/tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd/commits/0
+24/07/08 12:20:30 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/commits/.0.4389565d-5eb7-43cf-afd0-131572723988.tmp to file:/tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea/commits/0
+24/07/08 12:20:30 INFO MicroBatchExecution: Streaming query made progress: {
+  "id" : "c4a78c9f-1d30-4178-b7bb-99f2484ec961",
+  "runId" : "61d90614-b10e-4443-bf5f-3e2761655aae",
+  "name" : "logs_table",
+  "timestamp" : "2024-07-08T12:20:26.299Z",
+  "batchId" : 0,
+  "numInputRows" : 0,
+  "inputRowsPerSecond" : 0.0,
+  "processedRowsPerSecond" : 0.0,
+  "durationMs" : {
+    "addBatch" : 1817,
+    "commitOffsets" : 128,
+    "getBatch" : 35,
+    "latestOffset" : 1700,
+    "queryPlanning" : 248,
+    "triggerExecution" : 4057,
+    "walCommit" : 82
+  },
+  "stateOperators" : [ ],
+  "sources" : [ {
+    "description" : "KafkaV2[Subscribe[logs]]",
+    "startOffset" : null,
+    "endOffset" : {
+      "logs" : {
+        "0" : 0
+      }
+    },
+    "latestOffset" : {
+      "logs" : {
+        "0" : 0
+      }
+    },
+    "numInputRows" : 0,
+    "inputRowsPerSecond" : 0.0,
+    "processedRowsPerSecond" : 0.0,
+    "metrics" : {
+      "avgOffsetsBehindLatest" : "0.0",
+      "maxOffsetsBehindLatest" : "0",
+      "minOffsetsBehindLatest" : "0"
+    }
+  } ],
+  "sink" : {
+    "description" : "MemorySink",
+    "numOutputRows" : 0
+  }
+}
+24/07/08 12:20:30 INFO MicroBatchExecution: Streaming query made progress: {
+  "id" : "0b4e3d3d-86e1-4753-b183-322293cb1d72",
+  "runId" : "09358a5e-4216-4fec-92fd-6ce6e95c1ac0",
+  "name" : null,
+  "timestamp" : "2024-07-08T12:20:27.212Z",
+  "batchId" : 0,
+  "numInputRows" : 0,
+  "inputRowsPerSecond" : 0.0,
+  "processedRowsPerSecond" : 0.0,
+  "durationMs" : {
+    "addBatch" : 1933,
+    "commitOffsets" : 60,
+    "getBatch" : 26,
+    "latestOffset" : 795,
+    "queryPlanning" : 251,
+    "triggerExecution" : 3190,
+    "walCommit" : 88
+  },
+  "stateOperators" : [ ],
+  "sources" : [ {
+    "description" : "KafkaV2[Subscribe[logs]]",
+    "startOffset" : null,
+    "endOffset" : {
+      "logs" : {
+        "0" : 0
+      }
+    },
+    "latestOffset" : {
+      "logs" : {
+        "0" : 0
+      }
+    },
+    "numInputRows" : 0,
+    "inputRowsPerSecond" : 0.0,
+    "processedRowsPerSecond" : 0.0,
+    "metrics" : {
+      "avgOffsetsBehindLatest" : "0.0",
+      "maxOffsetsBehindLatest" : "0",
+      "minOffsetsBehindLatest" : "0"
+    }
+  } ],
+  "sink" : {
+    "description" : "org.apache.spark.sql.execution.streaming.ConsoleTable$@1290012d",
+    "numOutputRows" : 0
+  }
+}
+24/07/08 12:20:34 INFO BlockManagerInfo: Removed broadcast_1_piece0 on efrei-xmg4agau1.etudiants.campus.villejuif:37097 in memory (size: 2.5 KiB, free: 434.4 MiB)
+24/07/08 12:20:34 INFO BlockManagerInfo: Removed broadcast_0_piece0 on efrei-xmg4agau1.etudiants.campus.villejuif:37097 in memory (size: 2035.0 B, free: 434.4 MiB)
+24/07/08 12:20:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:20:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:20:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:20:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:21:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:22:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:23:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+127.0.0.1 - - [08/Jul/2024 12:23:52] "GET / HTTP/1.1" 404 -
+24/07/08 12:24:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:24:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+127.0.0.1 - - [08/Jul/2024 12:24:01] "GET /logs HTTP/1.1" 200 -
+24/07/08 12:24:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:24:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:24:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:24:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:24:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:24:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:24:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:24:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:24:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:24:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:27 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+24/07/08 12:25:27 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+24/07/08 12:25:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:25:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:26:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:27:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:28:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:29:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:30:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:10 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:20 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:30 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:40 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:31:50 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:00 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:11 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:11 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:21 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:21 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:31 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:31 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:41 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:41 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:51 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:32:51 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:01 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:01 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:11 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:11 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:21 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:21 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:31 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:31 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:41 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:41 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:51 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:33:51 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:01 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:01 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:11 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:11 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:21 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:21 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:31 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:31 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:41 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:41 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:51 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:34:51 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:01 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:01 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:11 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:11 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:21 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:21 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:31 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:31 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:41 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:41 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:51 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:51 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:35:54 INFO SparkContext: Invoking stop() from shutdown hook
+24/07/08 12:35:54 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/07/08 12:35:54 INFO SparkUI: Stopped Spark web UI at http://efrei-xmg4agau1.etudiants.campus.villejuif:4040
+24/07/08 12:35:54 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/07/08 12:35:54 INFO MemoryStore: MemoryStore cleared
+24/07/08 12:35:54 INFO BlockManager: BlockManager stopped
+24/07/08 12:35:54 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/07/08 12:35:54 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/07/08 12:35:54 INFO SparkContext: Successfully stopped SparkContext
+24/07/08 12:35:54 INFO ShutdownHookManager: Shutdown hook called
+24/07/08 12:35:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446/pyspark-ac3e5b31-e475-4eeb-897e-c11819831333
+24/07/08 12:35:54 INFO ShutdownHookManager: Deleting directory /tmp/temporary-3d77cff9-9e87-4896-af4f-8a10837751dd
+24/07/08 12:35:54 INFO ShutdownHookManager: Deleting directory /tmp/temporary-80af6775-df96-461d-9f56-7a27d428c2ea
+24/07/08 12:35:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-70cb6dfd-3b4d-42bf-83d8-033f76dbb11d
+24/07/08 12:35:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-bcf87770-c463-46d1-8f3f-697b9f22a446
+Starting Spark at Mon Jul  8 12:50:29 PM UTC 2024
+24/07/08 12:50:35 WARN Utils: Your hostname, vgr-spark-base64 resolves to a loopback address: 127.0.2.1; using 10.0.2.15 instead (on interface eth0)
+24/07/08 12:50:35 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+:: loading settings :: url = jar:file:/usr/local/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-97fd00a1-3520-4410-a0c3-6bb001a53f49;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 755ms :: artifacts dl 26ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-97fd00a1-3520-4410-a0c3-6bb001a53f49
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/14ms)
+24/07/08 12:50:37 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/07/08 12:50:39 INFO SparkContext: Running Spark version 3.5.1
+24/07/08 12:50:39 INFO SparkContext: OS info Linux, 5.15.0-56-generic, amd64
+24/07/08 12:50:39 INFO SparkContext: Java version 11.0.20.1
+24/07/08 12:50:39 INFO ResourceUtils: ==============================================================
+24/07/08 12:50:39 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/07/08 12:50:39 INFO ResourceUtils: ==============================================================
+24/07/08 12:50:39 INFO SparkContext: Submitted application: KafkaConnectivityTest
+24/07/08 12:50:39 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/07/08 12:50:40 INFO ResourceProfile: Limiting resource is cpu
+24/07/08 12:50:40 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/07/08 12:50:40 INFO SecurityManager: Changing view acls to: root
+24/07/08 12:50:40 INFO SecurityManager: Changing modify acls to: root
+24/07/08 12:50:40 INFO SecurityManager: Changing view acls groups to: 
+24/07/08 12:50:40 INFO SecurityManager: Changing modify acls groups to: 
+24/07/08 12:50:40 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+24/07/08 12:50:40 INFO Utils: Successfully started service 'sparkDriver' on port 37575.
+24/07/08 12:50:40 INFO SparkEnv: Registering MapOutputTracker
+24/07/08 12:50:40 INFO SparkEnv: Registering BlockManagerMaster
+24/07/08 12:50:40 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/07/08 12:50:40 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/07/08 12:50:40 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/07/08 12:50:40 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-56bec656-a9bf-451c-a3b4-8769dc332733
+24/07/08 12:50:40 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/07/08 12:50:40 INFO SparkEnv: Registering OutputCommitCoordinator
+24/07/08 12:50:41 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/07/08 12:50:41 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/07/08 12:50:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar at spark://10.0.2.15:37575/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar at spark://10.0.2.15:37575/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at spark://10.0.2.15:37575/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://10.0.2.15:37575/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://10.0.2.15:37575/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://10.0.2.15:37575/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://10.0.2.15:37575/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar at spark://10.0.2.15:37575/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at spark://10.0.2.15:37575/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://10.0.2.15:37575/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://10.0.2.15:37575/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar at file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:50:41 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar at file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:50:41 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO Utils: Copying /root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.kafka_kafka-clients-3.4.1.jar
+24/07/08 12:50:41 INFO SparkContext: Added file file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO Utils: Copying /root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/com.google.code.findbugs_jsr305-3.0.0.jar
+24/07/08 12:50:41 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO Utils: Copying /root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.commons_commons-pool2-2.11.1.jar
+24/07/08 12:50:41 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1720443039877
+24/07/08 12:50:41 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+24/07/08 12:50:42 INFO SparkContext: Added file file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: Copying /root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.lz4_lz4-java-1.8.0.jar
+24/07/08 12:50:42 INFO SparkContext: Added file file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar at file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: Copying /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.xerial.snappy_snappy-java-1.1.10.3.jar
+24/07/08 12:50:42 INFO SparkContext: Added file file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: Copying /root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.slf4j_slf4j-api-2.0.7.jar
+24/07/08 12:50:42 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+24/07/08 12:50:42 INFO SparkContext: Added file file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: Copying /root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/commons-logging_commons-logging-1.1.3.jar
+24/07/08 12:50:42 INFO Executor: Starting executor ID driver on host 10.0.2.15
+24/07/08 12:50:42 INFO Executor: OS info Linux, 5.15.0-56-generic, amd64
+24/07/08 12:50:42 INFO Executor: Java version 11.0.20.1
+24/07/08 12:50:42 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/07/08 12:50:42 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@2203e8a4 for default.
+24/07/08 12:50:42 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: /root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+24/07/08 12:50:42 INFO Executor: Fetching file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: /root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/com.google.code.findbugs_jsr305-3.0.0.jar
+24/07/08 12:50:42 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: /root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+24/07/08 12:50:42 INFO Executor: Fetching file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.xerial.snappy_snappy-java-1.1.10.3.jar
+24/07/08 12:50:42 INFO Executor: Fetching file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: /root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.slf4j_slf4j-api-2.0.7.jar
+24/07/08 12:50:42 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: /root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.commons_commons-pool2-2.11.1.jar
+24/07/08 12:50:42 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:50:42 INFO Executor: Fetching file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: /root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/commons-logging_commons-logging-1.1.3.jar
+24/07/08 12:50:42 INFO Executor: Fetching file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: /root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.lz4_lz4-java-1.8.0.jar
+24/07/08 12:50:42 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: /root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.kafka_kafka-clients-3.4.1.jar
+24/07/08 12:50:42 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: /root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:50:42 INFO Executor: Fetching spark://10.0.2.15:37575/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO TransportClientFactory: Successfully created connection to /10.0.2.15:37575 after 36 ms (0 ms spent in bootstraps)
+24/07/08 12:50:42 INFO Utils: Fetching spark://10.0.2.15:37575/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp8291851934292021714.tmp
+24/07/08 12:50:42 INFO Utils: /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp8291851934292021714.tmp has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/com.google.code.findbugs_jsr305-3.0.0.jar
+24/07/08 12:50:42 INFO Executor: Adding file:/tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/com.google.code.findbugs_jsr305-3.0.0.jar to class loader default
+24/07/08 12:50:42 INFO Executor: Fetching spark://10.0.2.15:37575/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: Fetching spark://10.0.2.15:37575/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp13617611745129873635.tmp
+24/07/08 12:50:42 INFO Utils: /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp13617611745129873635.tmp has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/commons-logging_commons-logging-1.1.3.jar
+24/07/08 12:50:42 INFO Executor: Adding file:/tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/commons-logging_commons-logging-1.1.3.jar to class loader default
+24/07/08 12:50:42 INFO Executor: Fetching spark://10.0.2.15:37575/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: Fetching spark://10.0.2.15:37575/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp4671114453594688209.tmp
+24/07/08 12:50:42 INFO Utils: /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp4671114453594688209.tmp has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.commons_commons-pool2-2.11.1.jar
+24/07/08 12:50:42 INFO Executor: Adding file:/tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.commons_commons-pool2-2.11.1.jar to class loader default
+24/07/08 12:50:42 INFO Executor: Fetching spark://10.0.2.15:37575/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1720443039877
+24/07/08 12:50:42 INFO Utils: Fetching spark://10.0.2.15:37575/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp4118146859519220933.tmp
+24/07/08 12:50:43 INFO Utils: /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp4118146859519220933.tmp has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+24/07/08 12:50:43 INFO Executor: Adding file:/tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.hadoop_hadoop-client-api-3.3.4.jar to class loader default
+24/07/08 12:50:43 INFO Executor: Fetching spark://10.0.2.15:37575/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar with timestamp 1720443039877
+24/07/08 12:50:43 INFO Utils: Fetching spark://10.0.2.15:37575/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp2468245819908509867.tmp
+24/07/08 12:50:43 INFO Utils: /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp2468245819908509867.tmp has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:50:43 INFO Executor: Adding file:/tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar to class loader default
+24/07/08 12:50:43 INFO Executor: Fetching spark://10.0.2.15:37575/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1720443039877
+24/07/08 12:50:43 INFO Utils: Fetching spark://10.0.2.15:37575/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp3516487720861449089.tmp
+24/07/08 12:50:43 INFO Utils: /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp3516487720861449089.tmp has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.kafka_kafka-clients-3.4.1.jar
+24/07/08 12:50:43 INFO Executor: Adding file:/tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.kafka_kafka-clients-3.4.1.jar to class loader default
+24/07/08 12:50:43 INFO Executor: Fetching spark://10.0.2.15:37575/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar with timestamp 1720443039877
+24/07/08 12:50:43 INFO Utils: Fetching spark://10.0.2.15:37575/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp15717310318939636927.tmp
+24/07/08 12:50:43 INFO Utils: /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp15717310318939636927.tmp has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar
+24/07/08 12:50:43 INFO Executor: Adding file:/tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar to class loader default
+24/07/08 12:50:43 INFO Executor: Fetching spark://10.0.2.15:37575/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1720443039877
+24/07/08 12:50:43 INFO Utils: Fetching spark://10.0.2.15:37575/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp8549164104435044750.tmp
+24/07/08 12:50:43 INFO Utils: /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp8549164104435044750.tmp has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.slf4j_slf4j-api-2.0.7.jar
+24/07/08 12:50:43 INFO Executor: Adding file:/tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.slf4j_slf4j-api-2.0.7.jar to class loader default
+24/07/08 12:50:43 INFO Executor: Fetching spark://10.0.2.15:37575/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1720443039877
+24/07/08 12:50:43 INFO Utils: Fetching spark://10.0.2.15:37575/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp1563153483341802785.tmp
+24/07/08 12:50:43 INFO Utils: /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp1563153483341802785.tmp has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.lz4_lz4-java-1.8.0.jar
+24/07/08 12:50:43 INFO Executor: Adding file:/tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.lz4_lz4-java-1.8.0.jar to class loader default
+24/07/08 12:50:43 INFO Executor: Fetching spark://10.0.2.15:37575/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1720443039877
+24/07/08 12:50:43 INFO Utils: Fetching spark://10.0.2.15:37575/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp11100839954682797886.tmp
+24/07/08 12:50:44 INFO Utils: /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp11100839954682797886.tmp has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+24/07/08 12:50:44 INFO Executor: Adding file:/tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to class loader default
+24/07/08 12:50:44 INFO Executor: Fetching spark://10.0.2.15:37575/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1720443039877
+24/07/08 12:50:44 INFO Utils: Fetching spark://10.0.2.15:37575/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp10838024526335282789.tmp
+24/07/08 12:50:44 INFO Utils: /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/fetchFileTemp10838024526335282789.tmp has been previously copied to /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.xerial.snappy_snappy-java-1.1.10.3.jar
+24/07/08 12:50:44 INFO Executor: Adding file:/tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/userFiles-aff63983-5f11-416d-916a-a8733998f26c/org.xerial.snappy_snappy-java-1.1.10.3.jar to class loader default
+24/07/08 12:50:44 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34545.
+24/07/08 12:50:44 INFO NettyBlockTransferService: Server created on 10.0.2.15:34545
+24/07/08 12:50:44 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/07/08 12:50:44 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.0.2.15, 34545, None)
+24/07/08 12:50:44 INFO BlockManagerMasterEndpoint: Registering block manager 10.0.2.15:34545 with 434.4 MiB RAM, BlockManagerId(driver, 10.0.2.15, 34545, None)
+24/07/08 12:50:44 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.0.2.15, 34545, None)
+24/07/08 12:50:44 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.0.2.15, 34545, None)
+24/07/08 12:50:45 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/07/08 12:50:45 INFO SharedState: Warehouse path is 'file:/vagrant_data/spark-warehouse'.
+24/07/08 12:50:48 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+24/07/08 12:50:48 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+24/07/08 12:50:49 INFO ResolveWriteToStream: Checkpoint root file:///tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390 resolved to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390.
+24/07/08 12:50:49 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+24/07/08 12:50:49 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/metadata using temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/.metadata.1343cb1b-88d1-451c-9027-e7f71a6d5cda.tmp
+24/07/08 12:50:49 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/.metadata.1343cb1b-88d1-451c-9027-e7f71a6d5cda.tmp to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/metadata
+24/07/08 12:50:49 INFO MicroBatchExecution: Starting logs_table [id = cd1dfabb-8c7a-4d9e-9bf0-de0ce25473e0, runId = dfc33676-4b9e-43d2-8988-cd3ec7b8d721]. Use file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390 to store the query checkpoint.
+24/07/08 12:50:49 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@5230677b] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@198780f8]
+24/07/08 12:50:49 INFO OffsetSeqLog: BatchIds found from listing: 
+24/07/08 12:50:49 INFO OffsetSeqLog: BatchIds found from listing: 
+24/07/08 12:50:49 INFO MicroBatchExecution: Starting new streaming query.
+24/07/08 12:50:49 INFO MicroBatchExecution: Stream started from {}
+24/07/08 12:50:50 INFO AdminClientConfig: AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [192.168.33.1:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+24/07/08 12:50:50 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+24/07/08 12:50:50 INFO ResolveWriteToStream: Checkpoint root file:///tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b resolved to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b.
+24/07/08 12:50:50 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+24/07/08 12:50:50 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/metadata using temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/.metadata.50e0e549-e66b-4682-9446-c68c42ce4b91.tmp
+24/07/08 12:50:50 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/.metadata.50e0e549-e66b-4682-9446-c68c42ce4b91.tmp to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/metadata
+24/07/08 12:50:50 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+24/07/08 12:50:50 INFO MicroBatchExecution: Starting [id = ce65876d-0f13-4fea-9462-1c809b75f29b, runId = 895c73c8-1e67-4aed-a1fc-cb5399ec09aa]. Use file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b to store the query checkpoint.
+24/07/08 12:50:50 INFO AppInfoParser: Kafka version: 3.4.1
+24/07/08 12:50:50 INFO AppInfoParser: Kafka commitId: 8a516edc2755df89
+24/07/08 12:50:50 INFO AppInfoParser: Kafka startTimeMs: 1720443050396
+24/07/08 12:50:50 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@5230677b] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@198780f8]
+24/07/08 12:50:50 INFO OffsetSeqLog: BatchIds found from listing: 
+24/07/08 12:50:50 INFO OffsetSeqLog: BatchIds found from listing: 
+24/07/08 12:50:50 INFO MicroBatchExecution: Starting new streaming query.
+24/07/08 12:50:50 INFO MicroBatchExecution: Stream started from {}
+24/07/08 12:50:50 INFO AdminClientConfig: AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [192.168.33.1:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+24/07/08 12:50:50 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+24/07/08 12:50:50 INFO AppInfoParser: Kafka version: 3.4.1
+24/07/08 12:50:50 INFO AppInfoParser: Kafka commitId: 8a516edc2755df89
+24/07/08 12:50:50 INFO AppInfoParser: Kafka startTimeMs: 1720443050447
+ * Serving Flask app 'spark_app2'
+ * Debug mode: off
+24/07/08 12:50:51 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/sources/0/0 using temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/sources/0/.0.5e42459e-0e23-4c33-9262-f8f181409939.tmp
+24/07/08 12:50:51 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/sources/0/0 using temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/sources/0/.0.e8bf2f4d-3046-4b0e-aa18-f5c3db6db05e.tmp
+24/07/08 12:50:51 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/sources/0/.0.5e42459e-0e23-4c33-9262-f8f181409939.tmp to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/sources/0/0
+24/07/08 12:50:51 INFO KafkaMicroBatchStream: Initial offsets: {"logs":{"0":19}}
+24/07/08 12:50:51 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/sources/0/.0.e8bf2f4d-3046-4b0e-aa18-f5c3db6db05e.tmp to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/sources/0/0
+24/07/08 12:50:51 INFO KafkaMicroBatchStream: Initial offsets: {"logs":{"0":19}}
+24/07/08 12:50:51 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/offsets/0 using temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/offsets/.0.b8abd384-8813-490f-a693-f7a4f20271a2.tmp
+24/07/08 12:50:51 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/offsets/0 using temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/offsets/.0.7b40b6c3-b06b-4e58-bfee-b853489586a2.tmp
+24/07/08 12:50:51 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/offsets/.0.b8abd384-8813-490f-a693-f7a4f20271a2.tmp to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/offsets/0
+24/07/08 12:50:51 INFO MicroBatchExecution: Committed offsets for batch 0. Metadata OffsetSeqMetadata(0,1720443051237,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+24/07/08 12:50:51 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/offsets/.0.7b40b6c3-b06b-4e58-bfee-b853489586a2.tmp to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/offsets/0
+24/07/08 12:50:51 INFO MicroBatchExecution: Committed offsets for batch 0. Metadata OffsetSeqMetadata(0,1720443051236,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:51 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:50:52 INFO CodeGenerator: Code generated in 336.280429 ms
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.15:5000
+Press CTRL+C to quit
+24/07/08 12:50:52 INFO WriteToDataSourceV2Exec: Start processing data source write support: MicroBatchWrite[epoch: 0, writer: org.apache.spark.sql.execution.streaming.sources.MemoryStreamingWrite@3b4c885d]. The input RDD has 1 partitions.
+24/07/08 12:50:52 INFO WriteToDataSourceV2Exec: Start processing data source write support: MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]]. The input RDD has 1 partitions.
+24/07/08 12:50:52 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+24/07/08 12:50:52 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+24/07/08 12:50:52 INFO DAGScheduler: Got job 0 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/07/08 12:50:52 INFO DAGScheduler: Final stage: ResultStage 0 (start at NativeMethodAccessorImpl.java:0)
+24/07/08 12:50:52 INFO DAGScheduler: Parents of final stage: List()
+24/07/08 12:50:52 INFO DAGScheduler: Missing parents: List()
+24/07/08 12:50:52 INFO DAGScheduler: Submitting ResultStage 0 (ParallelCollectionRDD[9] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/07/08 12:50:52 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 3.4 KiB, free 434.4 MiB)
+24/07/08 12:50:52 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 2035.0 B, free 434.4 MiB)
+24/07/08 12:50:52 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.0.2.15:34545 (size: 2035.0 B, free: 434.4 MiB)
+24/07/08 12:50:52 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1585
+24/07/08 12:50:52 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (ParallelCollectionRDD[9] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/07/08 12:50:52 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+24/07/08 12:50:52 INFO DAGScheduler: Got job 1 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/07/08 12:50:52 INFO DAGScheduler: Final stage: ResultStage 1 (start at NativeMethodAccessorImpl.java:0)
+24/07/08 12:50:52 INFO DAGScheduler: Parents of final stage: List()
+24/07/08 12:50:52 INFO DAGScheduler: Missing parents: List()
+24/07/08 12:50:52 INFO DAGScheduler: Submitting ResultStage 1 (ParallelCollectionRDD[8] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/07/08 12:50:52 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.5 KiB, free 434.4 MiB)
+24/07/08 12:50:52 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.5 KiB, free 434.4 MiB)
+24/07/08 12:50:52 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.0.2.15:34545 (size: 2.5 KiB, free: 434.4 MiB)
+24/07/08 12:50:52 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+24/07/08 12:50:52 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (ParallelCollectionRDD[8] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/07/08 12:50:52 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+24/07/08 12:50:53 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 9652 bytes) 
+24/07/08 12:50:53 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 9652 bytes) 
+24/07/08 12:50:53 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+24/07/08 12:50:53 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+24/07/08 12:50:53 INFO DataWritingSparkTask: Writer for partition 0 is committing.
+24/07/08 12:50:53 INFO DataWritingSparkTask: Committed partition 0 (task 0, attempt 0, stage 0.0)
+24/07/08 12:50:53 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1252 bytes result sent to driver
+24/07/08 12:50:53 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 319 ms on 10.0.2.15 (executor driver) (1/1)
+24/07/08 12:50:53 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/07/08 12:50:53 INFO DAGScheduler: ResultStage 0 (start at NativeMethodAccessorImpl.java:0) finished in 0.729 s
+24/07/08 12:50:53 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/07/08 12:50:53 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+24/07/08 12:50:53 INFO DAGScheduler: Job 0 finished: start at NativeMethodAccessorImpl.java:0, took 0.800316 s
+24/07/08 12:50:53 INFO DataWritingSparkTask: Writer for partition 0 is committing.
+24/07/08 12:50:53 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]] is committing.
+24/07/08 12:50:53 INFO DataWritingSparkTask: Committed partition 0 (task 1, attempt 0, stage 1.0)
+-------------------------------------------
+24/07/08 12:50:53 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1353 bytes result sent to driver
+Batch: 0
+-------------------------------------------
+24/07/08 12:50:53 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 320 ms on 10.0.2.15 (executor driver) (1/1)
+24/07/08 12:50:53 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+24/07/08 12:50:53 INFO DAGScheduler: ResultStage 1 (start at NativeMethodAccessorImpl.java:0) finished in 0.474 s
+24/07/08 12:50:53 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+24/07/08 12:50:53 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+24/07/08 12:50:53 INFO DAGScheduler: Job 1 finished: start at NativeMethodAccessorImpl.java:0, took 0.836412 s
+24/07/08 12:50:53 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: org.apache.spark.sql.execution.streaming.sources.MemoryStreamingWrite@3b4c885d] is committing.
+24/07/08 12:50:53 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: org.apache.spark.sql.execution.streaming.sources.MemoryStreamingWrite@3b4c885d] committed.
+24/07/08 12:50:53 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/commits/0 using temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/commits/.0.259a07f6-8753-4794-a695-b8937da88ee2.tmp
++----------+---------+-------+---------+----+------+
+|@timestamp|log_level|message|container|host|stream|
++----------+---------+-------+---------+----+------+
++----------+---------+-------+---------+----+------+
+
+24/07/08 12:50:53 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/commits/.0.259a07f6-8753-4794-a695-b8937da88ee2.tmp to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/commits/0
+24/07/08 12:50:53 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]] committed.
+24/07/08 12:50:53 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/commits/0 using temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/commits/.0.73d03242-36f9-4bd0-91d8-18b74c11036d.tmp
+24/07/08 12:50:53 INFO MicroBatchExecution: Streaming query made progress: {
+  "id" : "cd1dfabb-8c7a-4d9e-9bf0-de0ce25473e0",
+  "runId" : "dfc33676-4b9e-43d2-8988-cd3ec7b8d721",
+  "name" : "logs_table",
+  "timestamp" : "2024-07-08T12:50:49.432Z",
+  "batchId" : 0,
+  "numInputRows" : 0,
+  "inputRowsPerSecond" : 0.0,
+  "processedRowsPerSecond" : 0.0,
+  "durationMs" : {
+    "addBatch" : 1774,
+    "commitOffsets" : 129,
+    "getBatch" : 37,
+    "latestOffset" : 1756,
+    "queryPlanning" : 255,
+    "triggerExecution" : 4151,
+    "walCommit" : 124
+  },
+  "stateOperators" : [ ],
+  "sources" : [ {
+    "description" : "KafkaV2[Subscribe[logs]]",
+    "startOffset" : null,
+    "endOffset" : {
+      "logs" : {
+        "0" : 19
+      }
+    },
+    "latestOffset" : {
+      "logs" : {
+        "0" : 19
+      }
+    },
+    "numInputRows" : 0,
+    "inputRowsPerSecond" : 0.0,
+    "processedRowsPerSecond" : 0.0,
+    "metrics" : {
+      "avgOffsetsBehindLatest" : "0.0",
+      "maxOffsetsBehindLatest" : "0",
+      "minOffsetsBehindLatest" : "0"
+    }
+  } ],
+  "sink" : {
+    "description" : "MemorySink",
+    "numOutputRows" : 0
+  }
+}
+24/07/08 12:50:53 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/commits/.0.73d03242-36f9-4bd0-91d8-18b74c11036d.tmp to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/commits/0
+24/07/08 12:50:53 INFO MicroBatchExecution: Streaming query made progress: {
+  "id" : "ce65876d-0f13-4fea-9462-1c809b75f29b",
+  "runId" : "895c73c8-1e67-4aed-a1fc-cb5399ec09aa",
+  "name" : null,
+  "timestamp" : "2024-07-08T12:50:50.413Z",
+  "batchId" : 0,
+  "numInputRows" : 0,
+  "inputRowsPerSecond" : 0.0,
+  "processedRowsPerSecond" : 0.0,
+  "durationMs" : {
+    "addBatch" : 1917,
+    "commitOffsets" : 91,
+    "getBatch" : 32,
+    "latestOffset" : 820,
+    "queryPlanning" : 258,
+    "triggerExecution" : 3265,
+    "walCommit" : 133
+  },
+  "stateOperators" : [ ],
+  "sources" : [ {
+    "description" : "KafkaV2[Subscribe[logs]]",
+    "startOffset" : null,
+    "endOffset" : {
+      "logs" : {
+        "0" : 19
+      }
+    },
+    "latestOffset" : {
+      "logs" : {
+        "0" : 19
+      }
+    },
+    "numInputRows" : 0,
+    "inputRowsPerSecond" : 0.0,
+    "processedRowsPerSecond" : 0.0,
+    "metrics" : {
+      "avgOffsetsBehindLatest" : "0.0",
+      "maxOffsetsBehindLatest" : "0",
+      "minOffsetsBehindLatest" : "0"
+    }
+  } ],
+  "sink" : {
+    "description" : "org.apache.spark.sql.execution.streaming.ConsoleTable$@54e9b04b",
+    "numOutputRows" : 0
+  }
+}
+24/07/08 12:50:57 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 10.0.2.15:34545 in memory (size: 2.5 KiB, free: 434.4 MiB)
+24/07/08 12:50:57 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 10.0.2.15:34545 in memory (size: 2035.0 B, free: 434.4 MiB)
+24/07/08 12:51:03 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:51:03 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:51:13 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:51:13 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:51:23 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:51:23 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:51:33 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:51:33 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:51:42 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/offsets/1 using temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/offsets/.1.c431ed99-7956-4889-bb07-63a86e948760.tmp
+24/07/08 12:51:42 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/offsets/1 using temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/offsets/.1.58a7f0d6-051f-4160-a0d6-28877365448a.tmp
+24/07/08 12:51:42 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/offsets/.1.58a7f0d6-051f-4160-a0d6-28877365448a.tmp to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/offsets/1
+24/07/08 12:51:42 INFO MicroBatchExecution: Committed offsets for batch 1. Metadata OffsetSeqMetadata(0,1720443102071,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+24/07/08 12:51:42 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/offsets/.1.c431ed99-7956-4889-bb07-63a86e948760.tmp to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/offsets/1
+24/07/08 12:51:42 INFO MicroBatchExecution: Committed offsets for batch 1. Metadata OffsetSeqMetadata(0,1720443102068,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/07/08 12:51:42 INFO WriteToDataSourceV2Exec: Start processing data source write support: MicroBatchWrite[epoch: 1, writer: ConsoleWriter[numRows=20, truncate=true]]. The input RDD has 1 partitions.
+24/07/08 12:51:42 INFO WriteToDataSourceV2Exec: Start processing data source write support: MicroBatchWrite[epoch: 1, writer: org.apache.spark.sql.execution.streaming.sources.MemoryStreamingWrite@a9ce740]. The input RDD has 1 partitions.
+24/07/08 12:51:42 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+24/07/08 12:51:42 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+24/07/08 12:51:42 INFO DAGScheduler: Got job 2 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/07/08 12:51:42 INFO DAGScheduler: Final stage: ResultStage 2 (start at NativeMethodAccessorImpl.java:0)
+24/07/08 12:51:42 INFO DAGScheduler: Parents of final stage: List()
+24/07/08 12:51:42 INFO DAGScheduler: Missing parents: List()
+24/07/08 12:51:42 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[16] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/07/08 12:51:42 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 26.7 KiB, free 434.4 MiB)
+24/07/08 12:51:42 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 11.2 KiB, free 434.4 MiB)
+24/07/08 12:51:42 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 10.0.2.15:34545 (size: 11.2 KiB, free: 434.4 MiB)
+24/07/08 12:51:42 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+24/07/08 12:51:42 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[16] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/07/08 12:51:42 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+24/07/08 12:51:42 INFO DAGScheduler: Got job 3 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/07/08 12:51:42 INFO DAGScheduler: Final stage: ResultStage 3 (start at NativeMethodAccessorImpl.java:0)
+24/07/08 12:51:42 INFO DAGScheduler: Parents of final stage: List()
+24/07/08 12:51:42 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 10571 bytes) 
+24/07/08 12:51:42 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+24/07/08 12:51:42 INFO DAGScheduler: Missing parents: List()
+24/07/08 12:51:42 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[17] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/07/08 12:51:42 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 26.9 KiB, free 434.3 MiB)
+24/07/08 12:51:42 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 11.3 KiB, free 434.3 MiB)
+24/07/08 12:51:42 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 10.0.2.15:34545 (size: 11.3 KiB, free: 434.4 MiB)
+24/07/08 12:51:42 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1585
+24/07/08 12:51:42 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[17] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/07/08 12:51:42 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks resource profile 0
+24/07/08 12:51:42 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 10567 bytes) 
+24/07/08 12:51:42 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+24/07/08 12:51:42 INFO CodeGenerator: Code generated in 75.958497 ms
+24/07/08 12:51:42 INFO CodeGenerator: Code generated in 69.335191 ms
+24/07/08 12:51:42 INFO KafkaBatchReaderFactory: Creating Kafka reader topicPartition=logs-0 fromOffset=19 untilOffset=20, for query queryId=ce65876d-0f13-4fea-9462-1c809b75f29b batchId=1 taskId=2 partitionId=0
+24/07/08 12:51:42 INFO KafkaBatchReaderFactory: Creating Kafka reader topicPartition=logs-0 fromOffset=19 untilOffset=20, for query queryId=cd1dfabb-8c7a-4d9e-9bf0-de0ce25473e0 batchId=1 taskId=3 partitionId=0
+24/07/08 12:51:42 INFO CodeGenerator: Code generated in 18.376661 ms
+24/07/08 12:51:42 INFO CodeGenerator: Code generated in 20.346142 ms
+24/07/08 12:51:42 INFO ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = none
+	bootstrap.servers = [192.168.33.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+24/07/08 12:51:42 INFO ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = none
+	bootstrap.servers = [192.168.33.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+24/07/08 12:51:42 INFO AppInfoParser: Kafka version: 3.4.1
+24/07/08 12:51:42 INFO AppInfoParser: Kafka commitId: 8a516edc2755df89
+24/07/08 12:51:42 INFO AppInfoParser: Kafka startTimeMs: 1720443102862
+24/07/08 12:51:42 INFO AppInfoParser: Kafka version: 3.4.1
+24/07/08 12:51:42 INFO AppInfoParser: Kafka commitId: 8a516edc2755df89
+24/07/08 12:51:42 INFO AppInfoParser: Kafka startTimeMs: 1720443102863
+24/07/08 12:51:42 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1, groupId=spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor] Assigned to partition(s): logs-0
+24/07/08 12:51:42 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2, groupId=spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor] Assigned to partition(s): logs-0
+24/07/08 12:51:42 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2, groupId=spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor] Seeking to offset 19 for partition logs-0
+24/07/08 12:51:42 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1, groupId=spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor] Seeking to offset 19 for partition logs-0
+24/07/08 12:51:42 INFO Metadata: [Consumer clientId=consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1, groupId=spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor] Resetting the last seen epoch of partition logs-0 to 0 since the associated topicId changed from null to oXFuN0rgQPmycqB5YJI-Jg
+24/07/08 12:51:42 INFO Metadata: [Consumer clientId=consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2, groupId=spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor] Resetting the last seen epoch of partition logs-0 to 0 since the associated topicId changed from null to oXFuN0rgQPmycqB5YJI-Jg
+24/07/08 12:51:42 INFO Metadata: [Consumer clientId=consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1, groupId=spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor] Cluster ID: UhK5c0d-TfKr3RzAO7A0IA
+24/07/08 12:51:42 INFO Metadata: [Consumer clientId=consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2, groupId=spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor] Cluster ID: UhK5c0d-TfKr3RzAO7A0IA
+24/07/08 12:51:43 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1, groupId=spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor] Seeking to earliest offset of partition logs-0
+24/07/08 12:51:43 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2, groupId=spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor] Seeking to earliest offset of partition logs-0
+24/07/08 12:51:43 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1, groupId=spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor] Resetting offset for partition logs-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-G8N3TE3.mshome.net:9092 (id: 0 rack: null)], epoch=0}}.
+24/07/08 12:51:43 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2, groupId=spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor] Resetting offset for partition logs-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-G8N3TE3.mshome.net:9092 (id: 0 rack: null)], epoch=0}}.
+24/07/08 12:51:43 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2, groupId=spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor] Seeking to latest offset of partition logs-0
+24/07/08 12:51:43 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1, groupId=spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor] Seeking to latest offset of partition logs-0
+24/07/08 12:51:43 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2, groupId=spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor] Resetting offset for partition logs-0 to position FetchPosition{offset=20, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-G8N3TE3.mshome.net:9092 (id: 0 rack: null)], epoch=0}}.
+24/07/08 12:51:43 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1, groupId=spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor] Resetting offset for partition logs-0 to position FetchPosition{offset=20, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-G8N3TE3.mshome.net:9092 (id: 0 rack: null)], epoch=0}}.
+24/07/08 12:51:43 INFO DataWritingSparkTask: Writer for partition 0 is committing.
+24/07/08 12:51:43 INFO DataWritingSparkTask: Committed partition 0 (task 2, attempt 0, stage 2.0)
+24/07/08 12:51:43 INFO KafkaDataConsumer: From Kafka topicPartition=logs-0 groupId=spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor read 1 records through 1 polls (polled  out 1 records), taking 669244250 nanos, during time span of 850651965 nanos.
+24/07/08 12:51:43 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 2477 bytes result sent to driver
+24/07/08 12:51:43 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 1426 ms on 10.0.2.15 (executor driver) (1/1)
+24/07/08 12:51:43 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+24/07/08 12:51:43 INFO DAGScheduler: ResultStage 2 (start at NativeMethodAccessorImpl.java:0) finished in 1.484 s
+24/07/08 12:51:43 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+24/07/08 12:51:43 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+24/07/08 12:51:43 INFO DAGScheduler: Job 2 finished: start at NativeMethodAccessorImpl.java:0, took 1.498586 s
+24/07/08 12:51:43 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 1, writer: ConsoleWriter[numRows=20, truncate=true]] is committing.
+-------------------------------------------
+Batch: 1
+-------------------------------------------
+24/07/08 12:51:43 INFO CodeGenerator: Code generated in 10.707564 ms
+24/07/08 12:51:43 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 10.0.2.15:34545 in memory (size: 11.2 KiB, free: 434.4 MiB)
+24/07/08 12:51:45 INFO CodeGenerator: Code generated in 16.830849 ms
++--------------------+---------+--------------------+--------------------+------------------+------+
+|          @timestamp|log_level|             message|           container|              host|stream|
++--------------------+---------+--------------------+--------------------+------------------+------+
+|2024-07-08T12:51:...|     NULL|172.17.0.1 - - [0...|{nginx-container,...|{vgr-spark-base64}|stdout|
++--------------------+---------+--------------------+--------------------+------------------+------+
+
+24/07/08 12:51:45 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 1, writer: ConsoleWriter[numRows=20, truncate=true]] committed.
+24/07/08 12:51:45 INFO CodeGenerator: Code generated in 41.393977 ms
+24/07/08 12:51:45 INFO DataWritingSparkTask: Writer for partition 0 is committing.
+24/07/08 12:51:45 INFO DataWritingSparkTask: Committed partition 0 (task 3, attempt 0, stage 3.0)
+24/07/08 12:51:45 INFO KafkaDataConsumer: From Kafka topicPartition=logs-0 groupId=spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor read 1 records through 1 polls (polled  out 1 records), taking 668195986 nanos, during time span of 2170741124 nanos.
+24/07/08 12:51:45 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 4003 bytes result sent to driver
+24/07/08 12:51:45 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 2872 ms on 10.0.2.15 (executor driver) (1/1)
+24/07/08 12:51:45 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+24/07/08 12:51:45 INFO DAGScheduler: ResultStage 3 (start at NativeMethodAccessorImpl.java:0) finished in 2.895 s
+24/07/08 12:51:45 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+24/07/08 12:51:45 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+24/07/08 12:51:45 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/commits/1 using temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/commits/.1.9746e7c7-695b-47ff-8a9c-abb509ec2ea2.tmp
+24/07/08 12:51:45 INFO DAGScheduler: Job 3 finished: start at NativeMethodAccessorImpl.java:0, took 2.980528 s
+24/07/08 12:51:45 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 1, writer: org.apache.spark.sql.execution.streaming.sources.MemoryStreamingWrite@a9ce740] is committing.
+24/07/08 12:51:45 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 1, writer: org.apache.spark.sql.execution.streaming.sources.MemoryStreamingWrite@a9ce740] committed.
+24/07/08 12:51:45 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/commits/1 using temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/commits/.1.28c257d3-6a71-4e70-8e3d-b33913dc96de.tmp
+24/07/08 12:51:45 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/commits/.1.9746e7c7-695b-47ff-8a9c-abb509ec2ea2.tmp to file:/tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b/commits/1
+24/07/08 12:51:45 INFO MicroBatchExecution: Streaming query made progress: {
+  "id" : "ce65876d-0f13-4fea-9462-1c809b75f29b",
+  "runId" : "895c73c8-1e67-4aed-a1fc-cb5399ec09aa",
+  "name" : null,
+  "timestamp" : "2024-07-08T12:51:42.066Z",
+  "batchId" : 1,
+  "numInputRows" : 1,
+  "inputRowsPerSecond" : 50.0,
+  "processedRowsPerSecond" : 0.30950170225936247,
+  "durationMs" : {
+    "addBatch" : 2868,
+    "commitOffsets" : 266,
+    "getBatch" : 0,
+    "latestOffset" : 5,
+    "queryPlanning" : 27,
+    "triggerExecution" : 3231,
+    "walCommit" : 64
+  },
+  "stateOperators" : [ ],
+  "sources" : [ {
+    "description" : "KafkaV2[Subscribe[logs]]",
+    "startOffset" : {
+      "logs" : {
+        "0" : 19
+      }
+    },
+    "endOffset" : {
+      "logs" : {
+        "0" : 20
+      }
+    },
+    "latestOffset" : {
+      "logs" : {
+        "0" : 20
+      }
+    },
+    "numInputRows" : 1,
+    "inputRowsPerSecond" : 50.0,
+    "processedRowsPerSecond" : 0.30950170225936247,
+    "metrics" : {
+      "avgOffsetsBehindLatest" : "0.0",
+      "maxOffsetsBehindLatest" : "0",
+      "minOffsetsBehindLatest" : "0"
+    }
+  } ],
+  "sink" : {
+    "description" : "org.apache.spark.sql.execution.streaming.ConsoleTable$@54e9b04b",
+    "numOutputRows" : 1
+  }
+}
+24/07/08 12:51:45 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/commits/.1.28c257d3-6a71-4e70-8e3d-b33913dc96de.tmp to file:/tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390/commits/1
+24/07/08 12:51:45 INFO MicroBatchExecution: Streaming query made progress: {
+  "id" : "cd1dfabb-8c7a-4d9e-9bf0-de0ce25473e0",
+  "runId" : "dfc33676-4b9e-43d2-8988-cd3ec7b8d721",
+  "name" : "logs_table",
+  "timestamp" : "2024-07-08T12:51:42.063Z",
+  "batchId" : 1,
+  "numInputRows" : 1,
+  "inputRowsPerSecond" : 58.8235294117647,
+  "processedRowsPerSecond" : 0.30721966205837176,
+  "durationMs" : {
+    "addBatch" : 3066,
+    "commitOffsets" : 85,
+    "getBatch" : 0,
+    "latestOffset" : 5,
+    "queryPlanning" : 30,
+    "triggerExecution" : 3255,
+    "walCommit" : 68
+  },
+  "stateOperators" : [ ],
+  "sources" : [ {
+    "description" : "KafkaV2[Subscribe[logs]]",
+    "startOffset" : {
+      "logs" : {
+        "0" : 19
+      }
+    },
+    "endOffset" : {
+      "logs" : {
+        "0" : 20
+      }
+    },
+    "latestOffset" : {
+      "logs" : {
+        "0" : 20
+      }
+    },
+    "numInputRows" : 1,
+    "inputRowsPerSecond" : 58.8235294117647,
+    "processedRowsPerSecond" : 0.30721966205837176,
+    "metrics" : {
+      "avgOffsetsBehindLatest" : "0.0",
+      "maxOffsetsBehindLatest" : "0",
+      "minOffsetsBehindLatest" : "0"
+    }
+  } ],
+  "sink" : {
+    "description" : "MemorySink",
+    "numOutputRows" : 1
+  }
+}
+24/07/08 12:51:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:51:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:00 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 10.0.2.15:34545 in memory (size: 11.3 KiB, free: 434.4 MiB)
+24/07/08 12:52:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:07 INFO CodeGenerator: Code generated in 92.20644 ms
+24/07/08 12:52:07 INFO CodeGenerator: Code generated in 18.458623 ms
+127.0.0.1 - - [08/Jul/2024 12:52:07] "GET /logs HTTP/1.1" 200 -
+24/07/08 12:52:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:52:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:53:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:54:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:51 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+24/07/08 12:55:51 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+24/07/08 12:55:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:55:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:56:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:42 INFO ConsumerCoordinator: [Consumer clientId=consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2, groupId=spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor] Resetting generation and member id due to: consumer pro-actively leaving the group
+24/07/08 12:57:42 INFO ConsumerCoordinator: [Consumer clientId=consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2, groupId=spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor] Request joining group due to: consumer pro-actively leaving the group
+24/07/08 12:57:42 INFO Metrics: Metrics scheduler closed
+24/07/08 12:57:42 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+24/07/08 12:57:42 INFO Metrics: Metrics reporters closed
+24/07/08 12:57:42 INFO AppInfoParser: App info kafka.consumer for consumer-spark-kafka-source-030b9be1-667b-46cb-b3c0-e65e935a8704-5230674-executor-2 unregistered
+24/07/08 12:57:42 INFO ConsumerCoordinator: [Consumer clientId=consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1, groupId=spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor] Resetting generation and member id due to: consumer pro-actively leaving the group
+24/07/08 12:57:42 INFO ConsumerCoordinator: [Consumer clientId=consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1, groupId=spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor] Request joining group due to: consumer pro-actively leaving the group
+24/07/08 12:57:42 INFO Metrics: Metrics scheduler closed
+24/07/08 12:57:42 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+24/07/08 12:57:42 INFO Metrics: Metrics reporters closed
+24/07/08 12:57:42 INFO AppInfoParser: App info kafka.consumer for consumer-spark-kafka-source-f2065845-3270-4444-8297-a047edba68e0--1024746931-executor-1 unregistered
+24/07/08 12:57:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:57:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:58:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:25 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:35 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:45 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 12:59:55 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 13:00:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 13:00:05 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 13:00:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 13:00:15 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/07/08 13:00:25 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node 0 disconnected.
+24/07/08 13:00:25 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node 0 disconnected.
+24/07/08 13:00:25 INFO NetworkClient: [AdminClient clientId=adminclient-2] Cancelled in-flight METADATA request with correlation id 99103 due to node 0 being disconnected (elapsed time since creation: 12ms, elapsed time since send: 12ms, request timeout: 30000ms)
+24/07/08 13:00:25 INFO NetworkClient: [AdminClient clientId=adminclient-1] Cancelled in-flight METADATA request with correlation id 99248 due to node 0 being disconnected (elapsed time since creation: 11ms, elapsed time since send: 11ms, request timeout: 30000ms)
+24/07/08 13:00:27 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node 0 disconnected.
+24/07/08 13:00:27 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node 0 disconnected.
+24/07/08 13:00:27 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:27 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:29 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node 0 disconnected.
+24/07/08 13:00:29 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:29 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node 0 disconnected.
+24/07/08 13:00:29 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:31 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node 0 disconnected.
+24/07/08 13:00:31 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:32 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node 0 disconnected.
+24/07/08 13:00:32 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:34 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node 0 disconnected.
+24/07/08 13:00:34 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:34 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node 0 disconnected.
+24/07/08 13:00:34 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:37 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node 0 disconnected.
+24/07/08 13:00:37 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:37 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node 0 disconnected.
+24/07/08 13:00:37 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:40 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node 0 disconnected.
+24/07/08 13:00:40 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:40 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node 0 disconnected.
+24/07/08 13:00:40 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:43 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node 0 disconnected.
+24/07/08 13:00:43 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:43 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node 0 disconnected.
+24/07/08 13:00:43 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node 0 (DESKTOP-G8N3TE3.mshome.net/192.168.33.1:9092) could not be established. Broker may not be available.
+24/07/08 13:00:44 INFO SparkContext: Invoking stop() from shutdown hook
+24/07/08 13:00:44 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/07/08 13:00:44 INFO SparkUI: Stopped Spark web UI at http://10.0.2.15:4040
+24/07/08 13:00:44 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/07/08 13:00:45 INFO MemoryStore: MemoryStore cleared
+24/07/08 13:00:45 INFO BlockManager: BlockManager stopped
+24/07/08 13:00:45 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/07/08 13:00:45 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/07/08 13:00:45 INFO SparkContext: Successfully stopped SparkContext
+24/07/08 13:00:45 INFO ShutdownHookManager: Shutdown hook called
+24/07/08 13:00:45 INFO ShutdownHookManager: Deleting directory /tmp/temporary-b7cdbda3-1551-43e3-8495-87d8dfa60390
+24/07/08 13:00:45 INFO ShutdownHookManager: Deleting directory /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0/pyspark-09e22928-5372-47ba-a52e-06097a66e205
+24/07/08 13:00:45 INFO ShutdownHookManager: Deleting directory /tmp/spark-23544c81-b71b-47aa-bffc-ed5fa13badd3
+24/07/08 13:00:45 INFO ShutdownHookManager: Deleting directory /tmp/spark-bbbec0fb-0699-4830-a607-c0c00fb824d0
+24/07/08 13:00:45 INFO ShutdownHookManager: Deleting directory /tmp/temporary-96b6d8bb-ca47-407b-ac66-3a27b69ba51b
